@@ -2,7 +2,7 @@ name: CI/CD .NET Docker App
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ] # Trigger on pushes to main branch
 
 jobs:
   build-and-push:
@@ -54,8 +54,9 @@ jobs:
     #     host: ${{ secrets.SSH_HOST }}
     #     username: ${{ secrets.SSH_USER }}
     #     key: ${{ secrets.SSH_KEY }}
-    #     script: |
-    #       # Pull latest Docker image
+
+    #     script: | 
+    #       # Pull latest Docker image addd 
     #       docker pull ${{ secrets.DOCKER_USERNAME }}/mymvcapp:latest
     #       # Stop old container if exists
     #       docker stop mymvcapp || true
