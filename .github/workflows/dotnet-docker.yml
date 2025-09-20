@@ -46,7 +46,7 @@ jobs:
 
     # 9️⃣ Optional: Deploy to server via SSH
     - name: SSH and Deploy
-      if: ${{ secrets.SSH_HOST && secrets.SSH_USER && secrets.SSH_KEY }}
+      if: ${{ secrets.SSH_HOST != '' && secrets.SSH_USER != '' && secrets.SSH_KEY != '' }} # Only run if SSH secrets are set
       uses: appleboy/ssh-action@v0.1.6
       with:
         host: ${{ secrets.SSH_HOST }}
