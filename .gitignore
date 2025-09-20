@@ -1,0 +1,13 @@
+bin/
+obj/
+out/
+*.user
+*.vs/
+*.suo
+*.log
+*.tmp
+*.cache
+*.DS_Store
+.vscode/
+.idea/
+*.iml
